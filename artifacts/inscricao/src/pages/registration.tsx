@@ -612,7 +612,7 @@ export default function RegistrationPage() {
                   <img src={logoTatu} alt="Tatu Shopping de Frutas" className="max-h-full max-w-full object-contain" />
                 </div>
                 <div className="border border-[#DFE5EE] bg-white h-20 flex items-center justify-center p-4">
-                  <img src={logoTechZ} alt="Tech Z Informática" className="max-h-full max-w-full object-contain" />
+                  <img src={logoTechZ} alt="Tech Z Informática" className="max-h-12 max-w-full object-contain" />
                 </div>
                 <div className="border border-[#DFE5EE] bg-white h-20 flex items-center justify-center p-4 flex-col gap-1">
                   <img src={logoFioraiz} alt="Fioraiz" className="max-h-8 max-w-full object-contain" />
