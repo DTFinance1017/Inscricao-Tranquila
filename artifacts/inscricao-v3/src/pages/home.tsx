@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { useCreateRegistration } from "@workspace/api-client-react";
-import { Loader2, ChevronRight, Menu, X, Trophy, Flag, Shield, Calendar, CreditCard, Gift, MapPin } from "lucide-react";
+import { Loader2, ChevronRight, Trophy, Flag, Shield, Calendar, CreditCard, Gift, MapPin } from "lucide-react";
 
 // Brand Assets
 import logoRaceman from "@/assets/brand/rkt-color.png";
@@ -67,7 +67,6 @@ export default function Home() {
   const [copied, setCopied] = useState(false);
   
   const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showBottomCTA, setShowBottomCTA] = useState(false);
 
   const createRegistration = useCreateRegistration();
@@ -134,7 +133,6 @@ export default function Home() {
   }
 
   const scrollTo = (id: string) => {
-    setMobileMenuOpen(false);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -249,17 +247,7 @@ export default function Home() {
             <NavLinks />
           </div>
 
-          <button className="lg:hidden text-white p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
         </div>
-
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-brand-navy border-t border-white/10 shadow-2xl p-6 flex flex-col gap-6 animate-in slide-in-from-top-2">
-            <NavLinks />
-          </div>
-        )}
       </nav>
 
       {/* Hero Section */}
