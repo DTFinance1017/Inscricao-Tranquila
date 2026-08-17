@@ -70,6 +70,8 @@ export default function RegistrationPage() {
   const { toast } = useToast();
   const [isSuccess, setIsSuccess] = useState(false);
   const [waLink, setWaLink] = useState("");
+  const [waMessage, setWaMessage] = useState("");
+  const [copied, setCopied] = useState(false);
 
   const stats = useGetRegistrationStats();
   const createRegistration = useCreateRegistration();
@@ -106,6 +108,7 @@ export default function RegistrationPage() {
           
           const generatedWaLink = `https://wa.me/5519994173926?text=${encodeURIComponent(msg)}`;
           setWaLink(generatedWaLink);
+          setWaMessage(msg);
           
           try {
             window.open(generatedWaLink, "_blank");
@@ -161,6 +164,34 @@ export default function RegistrationPage() {
                     <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Button>
+              </div>
+            )}
+            {waMessage && (
+              <div className="space-y-1.5">
+                <Button
+                  className="w-full text-white h-14 font-display font-bold tracking-wide text-[13px] shadow-lg group hover:scale-[1.02] transition-transform"
+                  style={{ background: "linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4)" }}
+                  size="lg"
+                  onClick={async () => {
+                    try {
+                      await navigator.clipboard.writeText(waMessage);
+                      setCopied(true);
+                    } catch (e) {
+                      // clipboard may be unavailable; still open the direct
+                    }
+                    window.open("https://ig.me/m/racemankart", "_blank");
+                  }}
+                >
+                  <span className="flex items-center gap-2">
+                    ENVIAR PELO DIRECT DO INSTAGRAM
+                    <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Button>
+                <p className="text-[11px] text-[#7D8EA6] leading-snug">
+                  {copied
+                    ? "Mensagem copiada! É só colar no Direct do @racemankart e enviar."
+                    : "Ao tocar, seus dados são copiados — é só colar no Direct do @racemankart e enviar."}
+                </p>
               </div>
             )}
             <Button 
