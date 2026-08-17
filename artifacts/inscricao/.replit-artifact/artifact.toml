@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Inscrição Copa Raceman Kart 2027"
+description = "Página de inscrição mobile-first da Copa Raceman Kart 2027. O interessado preenche um formulário rápido para que a diretoria analise seu ingresso no campeonato."
+version = "1.0.0"
+id = "artifacts/inscricao"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23349
+
+[services.development]
+run = "pnpm --filter @workspace/inscricao run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/inscricao", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/inscricao/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23349"
+BASE_PATH = "/"

@@ -10,7 +10,61 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: registrations
+    description: Championship registration operations
 paths:
+  /registrations:
+    post:
+      operationId: createRegistration
+      tags: [registrations]
+      summary: Submit a registration
+      description: Submit a new championship registration for review
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegistrationInput"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Registration"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorMessage"
+    get:
+      operationId: listRegistrations
+      tags: [registrations]
+      summary: List registrations
+      description: List all submitted registrations (most recent first)
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Registration"
+  /registrations/stats:
+    get:
+      operationId: getRegistrationStats
+      tags: [registrations]
+      summary: Registration stats
+      description: Aggregate registration counts for the season
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RegistrationStats"
   /healthz:
     get:
       operationId: healthCheck
@@ -26,6 +80,68 @@ paths:
                 $ref: "#/components/schemas/HealthStatus"
 components:
   schemas:
+    Registration:
+      type: object
+      required: [id, fullName, whatsapp, experienceLevel, status, createdAt]
+      properties:
+        id:
+          type: number
+        fullName:
+          type: string
+        whatsapp:
+          type: string
+        email:
+          type: ["string", "null"]
+        city:
+          type: ["string", "null"]
+        birthYear:
+          type: ["number", "null"]
+        experienceLevel:
+          type: string
+          enum: [nunca_corri, iniciante, intermediario, avancado, competidor]
+        message:
+          type: ["string", "null"]
+        status:
+          type: string
+        createdAt:
+          type: string
+    RegistrationInput:
+      type: object
+      required: [fullName, whatsapp, experienceLevel]
+      properties:
+        fullName:
+          type: string
+          minLength: 3
+        whatsapp:
+          type: string
+          minLength: 8
+        email:
+          type: string
+        city:
+          type: string
+        birthYear:
+          type: number
+          minimum: 1920
+          maximum: 2020
+        experienceLevel:
+          type: string
+          enum: [nunca_corri, iniciante, intermediario, avancado, competidor]
+        message:
+          type: string
+    RegistrationStats:
+      type: object
+      required: [total, spotsTotal]
+      properties:
+        total:
+          type: number
+        spotsTotal:
+          type: number
+    ApiErrorMessage:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
     HealthStatus:
       type: object
       properties:

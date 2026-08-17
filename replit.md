@@ -1,6 +1,6 @@
-# [Project name]
+# Copa Raceman Kart 2027 — Inscrição
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Página de inscrição mobile-first onde interessados se inscrevem para a diretoria analisar seu ingresso no campeonato de kart.
 
 ## Run & Operate
 
@@ -30,7 +30,9 @@ _Populate as you build — non-obvious choices a reader couldn't infer from the 
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+- Landing/inscrição em `/` (artifact `artifacts/inscricao`): hero com identidade do campeonato + ficha de inscrição (nome, WhatsApp, e-mail, cidade, ano de nascimento, nível de experiência, mensagem). Todo o conteúdo em PT-BR.
+- API: `POST /api/registrations`, `GET /api/registrations`, `GET /api/registrations/stats` (rotas em `artifacts/api-server/src/routes/registrations.ts`; schema em `lib/db/src/schema/registrations.ts`).
+- Inscrições entram com status `em_analise`; conteúdo baseado no media kit em `attached_assets/`.
 
 ## User preferences
 
