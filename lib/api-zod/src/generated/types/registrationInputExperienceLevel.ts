@@ -10,8 +10,6 @@ export type RegistrationInputExperienceLevel = typeof RegistrationInputExperienc
 
 
 export const RegistrationInputExperienceLevel = {
-  nunca_corri: 'nunca_corri',
-  iniciante: 'iniciante',
   intermediario: 'intermediario',
   avancado: 'avancado',
   competidor: 'competidor',

@@ -27,7 +27,7 @@ export const CreateRegistrationBody = zod.object({
   "email": zod.string().optional(),
   "city": zod.string().optional(),
   "birthYear": zod.number().min(createRegistrationBodyBirthYearMin).max(createRegistrationBodyBirthYearMax).optional(),
-  "experienceLevel": zod.enum(['nunca_corri', 'iniciante', 'intermediario', 'avancado', 'competidor']),
+  "experienceLevel": zod.enum(['intermediario', 'avancado', 'competidor']),
   "message": zod.string().optional()
 })
 
@@ -38,7 +38,7 @@ export const CreateRegistrationResponse = zod.object({
   "email": zod.string().nullish(),
   "city": zod.string().nullish(),
   "birthYear": zod.number().nullish(),
-  "experienceLevel": zod.enum(['nunca_corri', 'iniciante', 'intermediario', 'avancado', 'competidor']),
+  "experienceLevel": zod.enum(['intermediario', 'avancado', 'competidor']),
   "message": zod.string().nullish(),
   "status": zod.string(),
   "createdAt": zod.string()

@@ -55,8 +55,6 @@ const formSchema = z.object({
     .optional()
     .or(z.literal(0).transform(() => undefined)),
   experienceLevel: z.enum([
-    "nunca_corri",
-    "iniciante",
     "intermediario",
     "avancado",
     "competidor",
@@ -84,7 +82,7 @@ export default function RegistrationPage() {
       email: "",
       city: "",
       birthYear: undefined,
-      experienceLevel: "iniciante",
+      experienceLevel: "intermediario",
       message: "",
     },
   });
@@ -97,8 +95,6 @@ export default function RegistrationPage() {
           setIsSuccess(true);
           
           const experienceLabels = {
-            nunca_corri: "Nunca corri",
-            iniciante: "Iniciante (Indoor)",
             intermediario: "Intermediário",
             avancado: "Avançado",
             competidor: "Competidor Pro"
@@ -537,8 +533,6 @@ export default function RegistrationPage() {
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="nunca_corri">Nunca corri</SelectItem>
-                        <SelectItem value="iniciante">Iniciante (Indoor)</SelectItem>
                         <SelectItem value="intermediario">Intermediário</SelectItem>
                         <SelectItem value="avancado">Avançado</SelectItem>
                         <SelectItem value="competidor">Competidor Pro</SelectItem>

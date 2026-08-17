@@ -84,7 +84,7 @@ components:
           type: ["number", "null"]
         experienceLevel:
           type: string
-          enum: [nunca_corri, iniciante, intermediario, avancado, competidor]
+          enum: [intermediario, avancado, competidor]
         message:
           type: ["string", "null"]
         status:
@@ -111,7 +111,7 @@ components:
           maximum: 2020
         experienceLevel:
           type: string
-          enum: [nunca_corri, iniciante, intermediario, avancado, competidor]
+          enum: [intermediario, avancado, competidor]
         message:
           type: string
     RegistrationStats:
