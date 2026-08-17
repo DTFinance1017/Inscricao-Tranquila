@@ -310,8 +310,10 @@ export default function RegistrationPage() {
             </div>
             <div className="h-px bg-white/10"></div>
             <div>
-              <div className="inline-block bg-[#F2B21C] px-3 py-1.5 font-display font-black text-lg leading-none text-[#0C2C55]">R$ 990,00<span className="text-xs font-bold"> / mês</span></div>
-              <div className="text-[11px] leading-relaxed text-[#9FBEDA] mt-2">Mensalidade do campeonato, que dá acesso à estrutura completa de treinos, etapas e suporte técnico.</div>
+              <div className="font-display font-bold text-[9px] tracking-[0.2em] text-[#F2B21C] mb-1.5">CUSTO DO CAMPEONATO</div>
+              <div className="font-display font-black text-3xl leading-none text-white">R$ 11.000<span className="text-base font-bold text-[#9FBEDA]">,00 à vista</span></div>
+              <div className="inline-block bg-[#F2B21C] px-3 py-1.5 font-display font-black text-lg leading-none text-[#0C2C55] mt-2">ou até 12× de R$ 990,00</div>
+              <div className="text-[11px] leading-relaxed text-[#9FBEDA] mt-2">Dá acesso à estrutura completa de treinos, etapas e suporte técnico da temporada.</div>
             </div>
           </div>
           <div className="mt-5 pt-4 border-t border-white/10">
@@ -319,7 +321,8 @@ export default function RegistrationPage() {
             <div className="space-y-2">
               {[
                 "Motor oficial Honda RBC 18HP, lacrado, para toda a temporada",
-                "11 treinos oficiais, um antes de cada etapa",
+                "Uso do motor oficial nos 11 treinos oficiais, um antes de cada etapa (custo da pista por conta do piloto)",
+                "Piloto com motor próprio pode treinar em outras datas, exceto na semana da corrida, conforme regulamento",
                 "Equalização completa dos motores duas vezes ao ano",
                 "Sorteio filmado dos motores em cada etapa",
                 "Manutenção, revisão, transporte e logística dos motores",
@@ -327,6 +330,10 @@ export default function RegistrationPage() {
                 "Premiação por etapa e classificação geral da temporada",
                 "Cobertura de mídia, fotos e divulgação nos canais oficiais",
                 "Transmissão ao vivo de algumas etapas, para amigos e familiares torcerem por você",
+                "Box para o chassi durante toda a temporada",
+                "Sala de pilotos climatizada nas etapas de Nova Odessa",
+                "Suporte da Equipe Mecânica Raceman nas corridas e treinos oficiais",
+                "Desconto especial na Kart Machine (peças e acessórios)",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-2.5">
                   <div className="w-1.5 h-1.5 mt-[5px] bg-[#F2B21C] shrink-0"></div>
