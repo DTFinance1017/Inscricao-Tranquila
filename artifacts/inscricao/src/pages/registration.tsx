@@ -275,17 +275,41 @@ export default function RegistrationPage() {
         </div>
 
         <div className="mt-4 bg-[#0C2C55] border-t-[4px] border-t-[#F2B21C] p-5">
-          <div className="font-display font-bold text-[9px] tracking-[0.28em] text-[#9FBEDA] mb-5">INVESTIMENTO DO PILOTO</div>
+          <div className="font-display font-bold text-[9px] tracking-[0.28em] text-[#9FBEDA] mb-5">INVESTIMENTO DA TEMPORADA</div>
           <div className="space-y-4">
             <div>
-              <div className="font-display font-black text-3xl leading-none text-[#F2B21C]">R$ 2.950</div>
-              <div className="font-display font-semibold text-[9px] tracking-[0.16em] text-[#9FBEDA] mt-1">INSCRIÇÃO DA TEMPORADA</div>
+              <div className="font-display font-bold text-[9px] tracking-[0.2em] text-[#F2B21C] mb-1.5">ALUGUEL DO MOTOR OFICIAL 2027</div>
+              <div className="font-display font-black text-3xl leading-none text-white">R$ 2.950<span className="text-base font-bold text-[#9FBEDA]">,00</span></div>
+              <div className="text-[11px] leading-relaxed text-[#9FBEDA] mt-2">Aluguel do motor Honda RBC 21HP para as <span className="text-white font-semibold">11 etapas + 11 treinos</span> da temporada.</div>
             </div>
             <div className="h-px bg-white/10"></div>
             <div>
-              <div className="font-display font-black text-3xl leading-none text-white">R$ 990<span className="text-base font-bold text-[#9FBEDA]">/mês</span></div>
-              <div className="font-display font-semibold text-[9px] tracking-[0.16em] text-[#9FBEDA] mt-1">MENSALIDADE DO CAMPEONATO</div>
+              <div className="inline-block bg-[#F2B21C] px-3 py-1.5 font-display font-black text-lg leading-none text-[#0C2C55]">R$ 990,00<span className="text-xs font-bold"> / mês</span></div>
+              <div className="text-[11px] leading-relaxed text-[#9FBEDA] mt-2">Mensalidade do campeonato, que dá acesso à estrutura completa de treinos, etapas e suporte técnico.</div>
             </div>
+          </div>
+          <div className="mt-5 pt-4 border-t border-white/10">
+            <div className="font-display font-bold text-[9px] tracking-[0.28em] text-[#9FBEDA] mb-3">O QUE ESTÁ INCLUSO</div>
+            <div className="space-y-2">
+              {[
+                "Motor oficial Honda RBC 21HP, lacrado, para toda a temporada",
+                "11 treinos oficiais, um antes de cada etapa",
+                "Equalização completa dos motores duas vezes ao ano",
+                "Sorteio filmado dos motores em cada etapa",
+                "Manutenção, revisão, transporte e logística dos motores",
+                "Cronometragem eletrônica e resultados oficiais por etapa",
+                "Premiação por etapa e classificação geral da temporada",
+                "Cobertura de mídia, fotos e divulgação nos canais oficiais",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-2.5">
+                  <div className="w-1.5 h-1.5 mt-[5px] bg-[#F2B21C] shrink-0"></div>
+                  <div className="text-[11px] leading-snug text-[#C7D6E8]">{item}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="mt-4 border-l-2 border-[#CA4F24] pl-3 text-[10px] leading-relaxed text-[#9FBEDA]">
+            O motor oficial é lacrado e permanece propriedade do campeonato. Valores válidos para a temporada 2027; condições de pagamento tratadas com a diretoria.
           </div>
         </div>
 
