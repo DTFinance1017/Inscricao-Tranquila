@@ -68,6 +68,7 @@ type FormValues = z.infer<typeof formSchema>;
 export default function RegistrationPage() {
   const { toast } = useToast();
   const [isSuccess, setIsSuccess] = useState(false);
+  const [waLink, setWaLink] = useState("");
 
   const stats = useGetRegistrationStats();
   const createRegistration = useCreateRegistration();
@@ -91,6 +92,26 @@ export default function RegistrationPage() {
       {
         onSuccess: () => {
           setIsSuccess(true);
+          
+          const experienceLabels = {
+            nunca_corri: "Nunca corri",
+            iniciante: "Iniciante (Indoor)",
+            intermediario: "Intermediário",
+            avancado: "Avançado",
+            competidor: "Competidor Pro"
+          };
+          
+          const msg = `Olá! Acabei de enviar minha inscrição para a Copa Raceman Kart 2027.\n\nNome: ${values.fullName}\nWhatsApp: ${values.whatsapp}\nCidade: ${values.city || 'Não informada'}\nExperiência: ${experienceLabels[values.experienceLevel]}\n\nAguardo o contato de vocês!`;
+          
+          const generatedWaLink = `https://wa.me/5519994173926?text=${encodeURIComponent(msg)}`;
+          setWaLink(generatedWaLink);
+          
+          try {
+            window.open(generatedWaLink, "_blank");
+          } catch (e) {
+            // fallback if blocked
+          }
+          
           window.scrollTo({ top: 0, behavior: "smooth" });
         },
         onError: (err) => {
@@ -106,24 +127,40 @@ export default function RegistrationPage() {
 
   if (isSuccess) {
     return (
-      <div className="min-h-screen bg-background flex flex-col items-center justify-center p-6 animate-in fade-in duration-700">
+      <div className="min-h-screen bg-[#F8FAFC] flex flex-col items-center justify-center p-6 animate-in fade-in duration-700 font-sans">
         <div className="max-w-md w-full text-center space-y-6">
-          <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto shadow-lg animate-in zoom-in-50 delay-150 duration-500">
+          <div className="w-20 h-20 bg-[#25D366] rounded-full flex items-center justify-center mx-auto shadow-lg animate-in zoom-in-50 delay-150 duration-500">
             <CheckCircle2 className="w-10 h-10 text-white" />
           </div>
-          <div className="space-y-2">
-            <h1 className="text-3xl font-display font-black uppercase tracking-tight text-[#0B2B55]">Inscrição Recebida!</h1>
-            <p className="text-muted-foreground text-lg">
-              Vamos analisar seu ingresso no campeonato e entrar em contato pelo WhatsApp em breve.
+          <div className="space-y-3">
+            <h1 className="text-4xl font-display font-black uppercase tracking-tight text-[#0C2C55] leading-none">Inscrição<br/>Recebida!</h1>
+            <p className="text-[#3B4B62] text-[14.5px] leading-[1.6]">
+              Vamos analisar seu ingresso no campeonato.
+              <br/>
+              Acompanhe o andamento no WhatsApp oficial da diretoria:
             </p>
+            <div className="font-display font-bold text-[18px] text-[#1B5FA8] tracking-[0.08em] my-3">
+              (19) 99417-3926
+            </div>
           </div>
-          <Button 
-            className="w-full mt-8 bg-[#0B2B55] hover:bg-[#082446] text-white h-14" 
-            size="lg"
-            onClick={() => window.location.reload()}
-          >
-            VOLTAR
-          </Button>
+          <div className="pt-4 space-y-3">
+            {waLink && (
+              <Button 
+                className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white h-14 font-display font-bold tracking-wide text-[14px]" 
+                size="lg"
+                onClick={() => window.open(waLink, "_blank")}
+              >
+                CONTINUAR NO WHATSAPP
+              </Button>
+            )}
+            <Button 
+              className="w-full bg-transparent hover:bg-[#DFE5EE] text-[#0C2C55] h-12 font-display font-bold border border-[#DFE5EE] tracking-wide" 
+              size="lg"
+              onClick={() => window.location.reload()}
+            >
+              VOLTAR
+            </Button>
+          </div>
         </div>
       </div>
     );
@@ -241,11 +278,66 @@ export default function RegistrationPage() {
         )}
       </section>
 
+      {/* Tracks Section */}
+      <section className="px-6 py-12 relative z-40 max-w-md mx-auto animate-in slide-in-from-bottom-12 fade-in duration-1000 delay-600 fill-mode-both">
+        <div className="flex items-baseline gap-3 mb-2">
+          <div className="font-display font-black text-sm tracking-[0.28em] text-[#B8C6DA]">02</div>
+          <div className="font-display font-bold text-[10px] tracking-[0.3em] text-[#CA4F24]">KARTÓDROMOS DA TEMPORADA</div>
+        </div>
+        
+        <h2 className="font-display font-black text-4xl leading-[0.95] tracking-[-0.01em] uppercase mb-6 text-[#0C2C55]">
+          Onde a copa<br/><span className="text-[#1B5FA8]">vai correr</span>
+        </h2>
+        
+        <p className="text-[12.5px] leading-[1.65] text-[#4A5C74] mb-8">
+          A temporada 2027 acontece prioritariamente no Kartódromo de Nova Odessa, sede principal do campeonato, com etapas itinerantes em pistas selecionadas da região.
+        </p>
+
+        {/* Sede Principal */}
+        <div className="bg-[#0C2C55] text-white relative overflow-hidden flex flex-col min-h-[220px] mb-8">
+          <img src={photoKart} className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-screen" alt="" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#071B36] to-transparent"></div>
+          <div className="relative p-6 flex flex-col justify-end flex-1">
+            <div className="font-display font-extrabold text-[10px] tracking-[0.3em] text-[#F2B21C] mb-3">SEDE PRINCIPAL</div>
+            <div className="font-display font-black text-3xl leading-[0.95] uppercase">Kartódromo de<br/>Nova Odessa</div>
+            <div className="mt-3 text-[12px] leading-[1.6] text-[#C4D5EA]">
+              Casa da Copa Raceman Kart e palco da maior parte das 11 etapas da temporada, com a estrutura de box, cronometragem e guarda dos motores oficiais.
+            </div>
+          </div>
+        </div>
+
+        {/* Etapas Itinerantes */}
+        <div className="font-display font-bold text-[11px] tracking-[0.3em] text-[#7D8EA6] mb-4">ETAPAS ITINERANTES</div>
+        <div className="grid grid-cols-2 gap-3">
+          {[
+            { name: "San Marino", city: "PAULÍNIA · SP" },
+            { name: "Limeira", city: "LIMEIRA · SP" },
+            { name: "Aldeia da Serra", city: "ALDEIA DA SERRA · SP" },
+            { name: "Arujá", city: "ARUJÁ · SP" },
+            { name: "Interlagos", city: "SÃO PAULO · SP", badge: "POTENCIAL NOVIDADE" }
+          ].map((p, i) => (
+            <div key={i} className={`border border-[#DFE5EE] p-4 flex flex-col justify-center bg-[#F8FAFC] ${p.badge ? 'col-span-2' : ''}`}>
+              <div className="font-display font-extrabold text-[13.5px] leading-[1.15] uppercase text-[#0C2C55]">{p.name}</div>
+              <div className="font-display font-semibold text-[9px] tracking-[0.16em] text-[#7D8EA6] mt-1">{p.city}</div>
+              {p.badge && (
+                <div className="mt-3 inline-block self-start bg-[#F2B21C] text-[#0C2C55] font-display font-bold text-[8.5px] tracking-[0.18em] px-2 py-1 uppercase">
+                  {p.badge}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+        
+        <div className="mt-6 pt-5 text-[10.5px] leading-[1.6] text-[#8B99AC]">
+          Calendário sujeito a confirmação das pistas e da diretoria. Interlagos entra como potencial novidade da temporada 2027.
+        </div>
+      </section>
+
       {/* Form Section */}
       <section className="px-6 max-w-md mx-auto py-8 animate-in slide-in-from-bottom-8 fade-in duration-1000 delay-700 fill-mode-both">
         <div className="mb-8">
           <div className="flex items-baseline gap-3 mb-2">
-            <div className="font-display font-black text-sm tracking-[0.28em] text-[#B8C6DA]">02</div>
+            <div className="font-display font-black text-sm tracking-[0.28em] text-[#B8C6DA]">03</div>
             <div className="font-display font-bold text-[10px] tracking-[0.3em] text-[#CA4F24]">SOLICITAÇÃO DE VAGA</div>
           </div>
           <h2 className="text-4xl font-display font-black text-[#0C2C55] uppercase tracking-[-0.01em] leading-[0.95]">
@@ -403,7 +495,7 @@ export default function RegistrationPage() {
         
         <div className="px-6 max-w-md mx-auto pt-10">
           <div className="flex items-baseline gap-3 mb-2">
-            <div className="font-display font-black text-sm tracking-[0.28em] text-[#5C7CA6]">03</div>
+            <div className="font-display font-black text-sm tracking-[0.28em] text-[#5C7CA6]">04</div>
             <div className="font-display font-bold text-[10px] tracking-[0.3em] text-[#F2B21C]">APOIO OFICIAL</div>
           </div>
           
