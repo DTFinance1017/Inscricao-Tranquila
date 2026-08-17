@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/v3/"
+title = "Inscrição Copa Raceman Kart 2027 — V3"
+description = "Terceira versão da landing page de inscrição da Copa Raceman Kart 2027: redesign premium e esportivo da página atual, preservando todo o conteúdo, preços, patrocinadores e o formulário de inscrição, com foco em conversão, responsividade e acessibilidade."
+version = "1.0.0"
+id = "artifacts/inscricao-v3"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/v3/" ]
+localPort = 24737
+
+[services.development]
+run = "pnpm --filter @workspace/inscricao-v3 run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/inscricao-v3", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/inscricao-v3/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24737"
+BASE_PATH = "/v3/"

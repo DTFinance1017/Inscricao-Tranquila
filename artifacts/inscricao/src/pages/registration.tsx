@@ -283,7 +283,7 @@ export default function RegistrationPage() {
             </div>
             <div className="h-px bg-[#E1E7EF]"></div>
             <div>
-              <div className="font-display font-black text-3xl leading-none text-[#0C2C55]">21<span className="text-xl">HP</span></div>
+              <div className="font-display font-black text-3xl leading-none text-[#0C2C55]">18<span className="text-xl">HP</span></div>
               <div className="font-display font-semibold text-[9px] tracking-[0.16em] text-[#5B6E88] mt-1">MOTOR HONDA RBC</div>
             </div>
             <div className="h-px bg-[#E1E7EF]"></div>
