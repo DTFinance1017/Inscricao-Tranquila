@@ -40,7 +40,7 @@ import logoTechZ from "@/assets/brand/techz.png";
 import logoFioraiz from "@/assets/brand/fioraiz.png";
 import logoPobreJuan from "@/assets/brand/pobrejuan-new.svg";
 import logoUlson from "@/assets/brand/ulson.png";
-import photoDriver from "@/assets/brand/photo-driver.png";
+import photoDriver from "@/assets/brand/photo-driver-kart.jpg";
 import photoKart from "@/assets/brand/photo-kart.png";
 
 const formSchema = z.object({
