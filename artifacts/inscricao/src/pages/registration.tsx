@@ -689,6 +689,24 @@ export default function RegistrationPage() {
                 <div className="border border-[#DFE5EE] bg-white h-20 flex items-center justify-center p-4">
                   <img src={logoPobreJuan} alt="Pobre Juan" className="max-h-full max-w-full object-contain brightness-0" />
                 </div>
+                <div className="border border-dashed border-[#DFE5EE]/60 bg-white h-20 flex items-center justify-center p-4">
+                  <span className="font-display font-bold text-[9px] tracking-[0.2em] text-[#B8C6DA]">SEU LOGO AQUI</span>
+                </div>
+                <div className="border border-dashed border-[#DFE5EE]/60 bg-white h-20 flex items-center justify-center p-4">
+                  <span className="font-display font-bold text-[9px] tracking-[0.2em] text-[#B8C6DA]">SEU LOGO AQUI</span>
+                </div>
+              </div>
+
+              <div className="mt-6 text-center">
+                <p className="text-[12.5px] leading-snug text-[#9FBCE0]">Entre em contato para ser um patrocinador e conheça todos os benefícios</p>
+                <a
+                  href={`https://wa.me/5511999556595?text=${encodeURIComponent("Olá! Tenho interesse em ser patrocinador da Copa Raceman Kart 2027.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 bg-[#F2B21C] text-[#0C2C55] font-display font-bold text-[12px] tracking-[0.12em] px-5 py-3 hover:scale-[1.03] transition-transform"
+                >
+                  QUERO SER PATROCINADOR · (11) 99955-6595
+                </a>
               </div>
             </div>
           </div>
