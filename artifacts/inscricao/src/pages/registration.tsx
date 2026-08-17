@@ -268,8 +268,22 @@ export default function RegistrationPage() {
             <div className="h-px bg-[#E1E7EF]"></div>
             <div>
               <div className="font-display font-black text-3xl leading-none text-[#0C2C55]">3<span className="text-[14px] ml-1 uppercase tracking-wide">Etapas</span></div>
-              <div className="font-display font-semibold text-[9px] tracking-[0.16em] text-[#5B6E88] mt-1">USO OBRIGATÓRIO DE PNEU NOVO</div>
+              <div className="font-display font-semibold text-[9px] tracking-[0.16em] text-[#5B6E88] mt-1">TROCA DE PNEUS A CADA 3 ETAPAS</div>
               <div className="font-display font-bold text-[9px] tracking-[0.16em] text-[#CA4F24] mt-0.5">CUSTO DO PILOTO</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-4 border border-[#E1E7EF] border-t-[4px] border-t-[#CA4F24] bg-[#F7F9FC] p-5">
+          <div className="font-display font-bold text-[9px] tracking-[0.28em] text-[#7D8EA6] mb-4">O QUE O PILOTO PRECISA TER</div>
+          <div className="space-y-3">
+            <div className="flex items-start gap-3">
+              <div className="w-1.5 h-1.5 mt-1.5 bg-[#CA4F24] shrink-0"></div>
+              <div className="font-display font-semibold text-[12px] leading-snug text-[#0C2C55] uppercase tracking-wide">Chassi próprio, de qualquer marca</div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-1.5 h-1.5 mt-1.5 bg-[#CA4F24] shrink-0"></div>
+              <div className="font-display font-semibold text-[12px] leading-snug text-[#0C2C55] uppercase tracking-wide">Dois jogos de rodas</div>
             </div>
           </div>
         </div>
