@@ -1,10 +1,8 @@
 import { Router, type IRouter } from "express";
-import { desc } from "drizzle-orm";
 import { db, registrationsTable } from "@workspace/db";
 import {
   CreateRegistrationBody,
   CreateRegistrationResponse,
-  ListRegistrationsResponse,
   GetRegistrationStatsResponse,
 } from "@workspace/api-zod";
 
@@ -52,19 +50,6 @@ router.post("/registrations", async (req, res) => {
   } catch (err) {
     req.log.error({ err }, "Failed to create registration");
     res.status(500).json({ error: "Erro ao enviar inscrição. Tente novamente." });
-  }
-});
-
-router.get("/registrations", async (req, res) => {
-  try {
-    const rows = await db
-      .select()
-      .from(registrationsTable)
-      .orderBy(desc(registrationsTable.createdAt));
-    res.json(ListRegistrationsResponse.parse(rows.map(serialize)));
-  } catch (err) {
-    req.log.error({ err }, "Failed to list registrations");
-    res.status(500).json({ error: "Erro ao listar inscrições." });
   }
 });
 

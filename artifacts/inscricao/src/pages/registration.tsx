@@ -27,7 +27,16 @@ import {
   useGetRegistrationStats
 } from "@workspace/api-client-react";
 import { Loader2, CheckCircle2, ChevronRight, Trophy, Zap, MapPin } from "lucide-react";
-import kartHeroUrl from "@assets/generated_images/kart_hero.jpg";
+
+// Official Logos
+import logoRaceman from "@/assets/brand/raceman-kart-logo.png";
+import logoPanther from "@/assets/brand/panther-lubrificantes-logo.png";
+import logoAro from "@/assets/brand/aro-contabilidade-logo.png";
+import logoLeofran from "@/assets/brand/leofran-transportes-logo.png";
+import logoTatu from "@/assets/brand/tatu-shopping-frutas-logo.png";
+import logoTechZ from "@/assets/brand/tech-z-informatica-logo.png";
+import logoFioraiz from "@/assets/brand/fioraiz-logo.png";
+import logoPobreJuan from "@/assets/brand/pobre-juan-logo.png";
 
 const formSchema = z.object({
   fullName: z.string().min(3, "Nome deve ter pelo menos 3 caracteres"),
@@ -99,17 +108,17 @@ export default function RegistrationPage() {
             <CheckCircle2 className="w-10 h-10 text-white" />
           </div>
           <div className="space-y-2">
-            <h1 className="text-3xl font-display font-black uppercase tracking-tight">Inscrição Recebida!</h1>
+            <h1 className="text-3xl font-display font-black uppercase tracking-tight text-[#0B2B55]">Inscrição Recebida!</h1>
             <p className="text-muted-foreground text-lg">
               Vamos analisar seu ingresso no campeonato e entrar em contato pelo WhatsApp em breve.
             </p>
           </div>
           <Button 
-            className="w-full mt-8" 
+            className="w-full mt-8 bg-[#0B2B55] hover:bg-[#082446] text-white h-14" 
             size="lg"
             onClick={() => window.location.reload()}
           >
-            Voltar
+            VOLTAR
           </Button>
         </div>
       </div>
@@ -117,78 +126,73 @@ export default function RegistrationPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background w-full overflow-x-hidden selection:bg-primary selection:text-white">
+    <div className="min-h-screen bg-background w-full overflow-x-hidden selection:bg-accent selection:text-accent-foreground">
       {/* Hero Section */}
       <section className="relative w-full">
-        {/* Background Image Container */}
-        <div className="relative h-[60vh] w-full overflow-hidden bg-black clip-diagonal">
-          <div className="absolute inset-0 z-10 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-          {/* Noise overlay */}
-          <div 
-            className="absolute inset-0 z-20 opacity-[0.03] mix-blend-overlay pointer-events-none" 
-            style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }}
-          ></div>
-          <img 
-            src={kartHeroUrl} 
-            alt="Racing Kart" 
-            className="absolute inset-0 w-full h-full object-cover object-center opacity-80"
-          />
-          <div className="absolute top-4 left-6 z-30 animate-in slide-in-from-top-4 fade-in duration-700 delay-150">
-            <div className="text-white font-display font-black text-2xl tracking-tighter uppercase flex items-center gap-1">
-              RACEMAN<span className="text-primary">KART</span>
-              <span className="text-[10px] ml-1 px-1.5 py-0.5 border border-white/20">2027</span>
-            </div>
+        <div className="relative h-[65vh] w-full overflow-hidden bg-[#0B2B55] clip-diagonal flex flex-col justify-between">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#082446] to-[#0B2B55]"></div>
+          
+          <div className="absolute top-0 inset-x-0 h-2 bg-checkered opacity-30"></div>
+
+          <div className="relative z-30 pt-10 px-6 flex flex-col items-center animate-in slide-in-from-top-4 fade-in duration-700 delay-150">
+            <img 
+              src={logoRaceman} 
+              alt="Copa Raceman Kart" 
+              className="w-48 max-w-full drop-shadow-xl"
+            />
+            <div className="mt-3 text-[#F0B010] font-mono text-sm tracking-widest font-bold">TEMPORADA 2027</div>
           </div>
           
-          <div className="absolute bottom-12 left-6 right-6 z-30">
-            <h1 className="text-white font-display font-black text-4xl leading-[0.9] tracking-tighter uppercase mb-4 max-w-sm animate-in slide-in-from-bottom-8 fade-in duration-1000 delay-300">
+          <div className="relative z-30 pb-16 px-6 max-w-md mx-auto w-full">
+            <div className="w-12 h-1 bg-[#EA4D1C] mb-6 animate-in slide-in-from-left-4 fade-in duration-1000 delay-300"></div>
+            <h1 className="text-white font-display font-black text-[2.5rem] leading-[0.95] tracking-tighter uppercase mb-4 animate-in slide-in-from-bottom-8 fade-in duration-1000 delay-300">
               MESMO MOTOR.<br/>
-              <span className="text-primary">MESMA CHANCE.</span><br/>
+              <span className="text-[#3291CB]">MESMA CHANCE.</span><br/>
               VENÇA NA PILOTAGEM.
             </h1>
-            <p className="text-white/80 font-mono text-sm max-w-[280px] animate-in fade-in duration-1000 delay-700">
-              A PISTA NÃO PERGUNTA O NOME DO SEU MOTOR.
+            <p className="text-white/80 font-mono text-[13px] uppercase max-w-[280px] animate-in fade-in duration-1000 delay-700 border-l-2 border-[#F0B010] pl-3 py-1">
+              A pista não pergunta o nome do seu motor.
             </p>
           </div>
         </div>
       </section>
 
       {/* Content Section */}
-      <section className="px-6 -mt-8 relative z-40 max-w-md mx-auto mb-12 animate-in slide-in-from-bottom-12 fade-in duration-1000 delay-500 fill-mode-both">
-        <div className="bg-card border-2 border-border shadow-2xl p-6 relative">
-          <div className="absolute top-0 right-0 w-12 h-12 bg-primary flex items-center justify-center text-white">
+      <section className="px-6 -mt-10 relative z-40 max-w-md mx-auto mb-10 animate-in slide-in-from-bottom-12 fade-in duration-1000 delay-500 fill-mode-both">
+        <div className="bg-card border border-border shadow-xl p-6 relative rounded-sm">
+          <div className="absolute top-0 right-0 w-12 h-12 bg-primary flex items-center justify-center text-primary-foreground clip-diagonal">
             <Trophy className="w-5 h-5" />
           </div>
           
-          <h2 className="text-xl font-display font-black uppercase tracking-tight mb-6">A Temporada 2027</h2>
+          <h2 className="text-xl font-display font-black text-foreground uppercase tracking-tight mb-6">A Temporada 2027</h2>
           
-          <div className="space-y-4 font-sans">
+          <div className="space-y-4 font-sans text-card-foreground">
             <div className="flex items-start gap-3">
-              <Zap className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+              <Zap className="w-5 h-5 text-accent shrink-0 mt-0.5" />
               <div>
-                <p className="font-bold text-sm uppercase">Igualdade Absoluta</p>
+                <p className="font-bold text-sm uppercase text-primary">Igualdade Absoluta</p>
                 <p className="text-muted-foreground text-sm">Motores Honda RBC 21HP lacrados da organização. Sorteio filmado a cada etapa. Equalização 2x ao ano.</p>
               </div>
             </div>
             
             <div className="flex items-start gap-3">
-              <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+              <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
               <div>
-                <p className="font-bold text-sm uppercase">Formato & Sede</p>
+                <p className="font-bold text-sm uppercase text-primary">Formato & Sede</p>
                 <p className="text-muted-foreground text-sm">11 etapas oficiais + 11 treinos. Kartódromo de Nova Odessa (SP).</p>
               </div>
             </div>
 
             <div className="pt-4 mt-4 border-t border-border">
-              <p className="font-mono text-xs text-muted-foreground mb-1">INVESTIMENTO</p>
-              <div className="flex flex-col gap-1">
-                <div className="flex justify-between items-baseline">
-                  <span className="font-bold text-sm">Aluguel do Motor</span>
-                  <span className="font-mono font-bold text-primary">R$ 2.950/ano</span>
+              <p className="font-mono text-[11px] font-bold text-primary mb-2">INVESTIMENTO DA TEMPORADA</p>
+              <div className="flex flex-col gap-2">
+                <div className="flex justify-between items-center bg-muted/30 p-2 rounded-sm border border-border/50">
+                  <span className="font-bold text-[13px]">Aluguel do Motor (Ano)</span>
+                  <span className="font-mono font-bold text-[#0B2B55]">R$ 2.950</span>
                 </div>
-                <div className="flex justify-between items-baseline">
-                  <span className="font-bold text-sm">Mensalidade</span>
-                  <span className="font-mono font-bold text-primary">R$ 990/mês</span>
+                <div className="flex justify-between items-center bg-muted/30 p-2 rounded-sm border border-border/50">
+                  <span className="font-bold text-[13px]">Mensalidade</span>
+                  <span className="font-mono font-bold text-[#0B2B55]">R$ 990/mês</span>
                 </div>
               </div>
             </div>
@@ -196,32 +200,32 @@ export default function RegistrationPage() {
         </div>
         
         {stats.data && (
-          <div className="mt-4 flex items-center justify-between text-xs font-mono font-bold uppercase tracking-wider text-muted-foreground animate-in fade-in duration-1000 delay-700 fill-mode-both">
-            <span>Pilotos na fila</span>
-            <span className="text-foreground">{stats.data.total} registrados</span>
+          <div className="mt-4 px-1 flex items-center justify-between text-[11px] font-mono font-bold uppercase tracking-wider text-muted-foreground animate-in fade-in duration-1000 delay-700 fill-mode-both">
+            <span>Pilotos na fila de análise</span>
+            <span className="text-primary bg-primary/10 px-2 py-0.5 rounded-sm">{stats.data.total} registrados</span>
           </div>
         )}
       </section>
 
       {/* Form Section */}
-      <section className="px-6 max-w-md mx-auto pb-24 animate-in slide-in-from-bottom-8 fade-in duration-1000 delay-700 fill-mode-both">
-        <div className="mb-8">
-          <h2 className="text-3xl font-display font-black uppercase tracking-tight">Ficha de Inscrição</h2>
-          <p className="text-muted-foreground mt-2 text-sm">
+      <section className="px-6 max-w-md mx-auto pb-12 animate-in slide-in-from-bottom-8 fade-in duration-1000 delay-700 fill-mode-both">
+        <div className="mb-6">
+          <h2 className="text-3xl font-display font-black text-[#0B2B55] uppercase tracking-tight">Ficha de Inscrição</h2>
+          <p className="text-muted-foreground mt-1 text-[13px] leading-relaxed">
             Inscreva-se para analisarmos seu ingresso no campeonato. Entraremos em contato via WhatsApp.
           </p>
         </div>
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5 bg-card p-5 border border-border shadow-md rounded-sm">
             <FormField
               control={form.control}
               name="fullName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Nome Completo *</FormLabel>
+                  <FormLabel className="text-[#0B2B55]">Nome Completo *</FormLabel>
                   <FormControl>
-                    <Input placeholder="Ayrton Senna" {...field} />
+                    <Input placeholder="Ayrton Senna" className="bg-background" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -233,9 +237,9 @@ export default function RegistrationPage() {
               name="whatsapp"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>WhatsApp (com DDD) *</FormLabel>
+                  <FormLabel className="text-[#0B2B55]">WhatsApp (com DDD) *</FormLabel>
                   <FormControl>
-                    <Input placeholder="(11) 99999-9999" type="tel" {...field} />
+                    <Input placeholder="(11) 99999-9999" type="tel" className="bg-background" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -248,9 +252,9 @@ export default function RegistrationPage() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>E-mail</FormLabel>
+                    <FormLabel className="text-[#0B2B55]">E-mail</FormLabel>
                     <FormControl>
-                      <Input placeholder="piloto@email.com" type="email" {...field} />
+                      <Input placeholder="piloto@email.com" type="email" className="bg-background" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -262,9 +266,9 @@ export default function RegistrationPage() {
                 name="city"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Cidade</FormLabel>
+                    <FormLabel className="text-[#0B2B55]">Cidade</FormLabel>
                     <FormControl>
-                      <Input placeholder="São Paulo" {...field} />
+                      <Input placeholder="São Paulo" className="bg-background" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -278,9 +282,9 @@ export default function RegistrationPage() {
                 name="birthYear"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Ano de Nasc.</FormLabel>
+                    <FormLabel className="text-[#0B2B55]">Ano de Nasc.</FormLabel>
                     <FormControl>
-                      <Input placeholder="1990" type="number" {...field} value={field.value || ""} />
+                      <Input placeholder="1990" type="number" className="bg-background" {...field} value={field.value || ""} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -292,10 +296,10 @@ export default function RegistrationPage() {
                 name="experienceLevel"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Experiência *</FormLabel>
+                    <FormLabel className="text-[#0B2B55]">Experiência *</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
-                        <SelectTrigger>
+                        <SelectTrigger className="bg-background">
                           <SelectValue placeholder="Selecione" />
                         </SelectTrigger>
                       </FormControl>
@@ -318,11 +322,11 @@ export default function RegistrationPage() {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Observações (Opcional)</FormLabel>
+                  <FormLabel className="text-[#0B2B55]">Observações (Opcional)</FormLabel>
                   <FormControl>
                     <Textarea 
                       placeholder="Fale um pouco sobre seu histórico no kart..." 
-                      className="resize-none"
+                      className="resize-none bg-background"
                       {...field} 
                     />
                   </FormControl>
@@ -334,7 +338,7 @@ export default function RegistrationPage() {
             <Button 
               type="submit" 
               size="lg" 
-              className="w-full h-14 text-lg mt-4 group"
+              className="w-full h-14 text-[15px] mt-4 group bg-[#0B2B55] hover:bg-[#082446] text-white"
               disabled={createRegistration.isPending}
             >
               {createRegistration.isPending ? (
@@ -342,12 +346,65 @@ export default function RegistrationPage() {
               ) : (
                 <>
                   ENVIAR INSCRIÇÃO
-                  <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform text-[#F0B010]" />
                 </>
               )}
             </Button>
           </form>
         </Form>
+      </section>
+
+      {/* Sponsors Section */}
+      <section className="bg-[#0B2B55] w-full pt-12 pb-16 px-6 mt-12 clip-diagonal" style={{ clipPath: 'polygon(0 30px, 100% 0, 100% 100%, 0 100%)' }}>
+        <div className="max-w-md mx-auto">
+          <div className="text-center mb-8">
+            <h3 className="text-[#F0B010] font-mono text-[11px] uppercase tracking-widest font-bold mb-2">Apoio Oficial</h3>
+            <div className="w-12 h-1 bg-[#EA4D1C] mx-auto"></div>
+          </div>
+          
+          <div className="space-y-10">
+            {/* Master Sponsors */}
+            <div>
+              <p className="text-white/60 font-mono text-[10px] uppercase text-center mb-4">Patrocinadores Master</p>
+              <div className="grid grid-cols-2 gap-4 items-center">
+                {/* Panther (Dark BG) */}
+                <div className="bg-[#082446] p-4 flex items-center justify-center rounded-sm h-24 border border-white/5">
+                  <img src={logoPanther} alt="Panther Lubrificantes" className="max-h-full max-w-full object-contain drop-shadow-md" />
+                </div>
+                {/* ARO (Light BG) */}
+                <div className="bg-white p-4 flex items-center justify-center rounded-sm h-24 shadow-inner">
+                  <img src={logoAro} alt="ARO Contabilidade" className="max-h-full max-w-full object-contain" />
+                </div>
+              </div>
+            </div>
+
+            {/* Supporting Sponsors */}
+            <div>
+              <p className="text-white/60 font-mono text-[10px] uppercase text-center mb-4">Demais Patrocinadores</p>
+              <div className="grid grid-cols-3 gap-3">
+                <div className="bg-white p-3 flex items-center justify-center rounded-sm h-16">
+                  <img src={logoLeofran} alt="Leofran Transportes" className="max-h-full max-w-full object-contain" />
+                </div>
+                <div className="bg-white p-3 flex items-center justify-center rounded-sm h-16">
+                  <img src={logoTatu} alt="Tatu Shopping de Frutas" className="max-h-full max-w-full object-contain" />
+                </div>
+                <div className="bg-white p-3 flex items-center justify-center rounded-sm h-16">
+                  <img src={logoTechZ} alt="Tech Z Informática" className="max-h-full max-w-full object-contain" />
+                </div>
+                <div className="bg-white p-3 flex items-center justify-center rounded-sm h-16">
+                  <img src={logoFioraiz} alt="Fioraiz" className="max-h-full max-w-full object-contain" />
+                </div>
+                <div className="bg-white p-3 flex items-center justify-center rounded-sm h-16 col-span-2">
+                  <img src={logoPobreJuan} alt="Pobre Juan" className="max-h-full max-w-full object-contain" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="max-w-md mx-auto mt-12 pt-6 border-t border-white/10 text-center flex flex-col items-center">
+            <img src={logoRaceman} alt="Copa Raceman Kart" className="w-24 opacity-50 grayscale mb-3" />
+            <p className="text-white/40 text-[10px] font-mono">© 2027 COPA RACEMAN KART. TODOS OS DIREITOS RESERVADOS.</p>
+        </div>
       </section>
     </div>
   );

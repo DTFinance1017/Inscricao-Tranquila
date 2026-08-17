@@ -46,25 +46,6 @@ export const CreateRegistrationResponse = zod.object({
 
 
 /**
- * List all submitted registrations (most recent first)
- * @summary List registrations
- */
-export const ListRegistrationsResponseItem = zod.object({
-  "id": zod.number(),
-  "fullName": zod.string(),
-  "whatsapp": zod.string(),
-  "email": zod.string().nullish(),
-  "city": zod.string().nullish(),
-  "birthYear": zod.number().nullish(),
-  "experienceLevel": zod.enum(['nunca_corri', 'iniciante', 'intermediario', 'avancado', 'competidor']),
-  "message": zod.string().nullish(),
-  "status": zod.string(),
-  "createdAt": zod.string()
-})
-export const ListRegistrationsResponse = zod.array(ListRegistrationsResponseItem)
-
-
-/**
  * Aggregate registration counts for the season
  * @summary Registration stats
  */

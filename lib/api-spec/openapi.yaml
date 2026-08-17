@@ -38,20 +38,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ApiErrorMessage"
-    get:
-      operationId: listRegistrations
-      tags: [registrations]
-      summary: List registrations
-      description: List all submitted registrations (most recent first)
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Registration"
   /registrations/stats:
     get:
       operationId: getRegistrationStats
