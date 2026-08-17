@@ -274,6 +274,21 @@ export default function RegistrationPage() {
           </div>
         </div>
 
+        <div className="mt-4 bg-[#0C2C55] border-t-[4px] border-t-[#F2B21C] p-5">
+          <div className="font-display font-bold text-[9px] tracking-[0.28em] text-[#9FBEDA] mb-5">INVESTIMENTO DO PILOTO</div>
+          <div className="space-y-4">
+            <div>
+              <div className="font-display font-black text-3xl leading-none text-[#F2B21C]">R$ 2.950</div>
+              <div className="font-display font-semibold text-[9px] tracking-[0.16em] text-[#9FBEDA] mt-1">INSCRIÇÃO DA TEMPORADA</div>
+            </div>
+            <div className="h-px bg-white/10"></div>
+            <div>
+              <div className="font-display font-black text-3xl leading-none text-white">R$ 990<span className="text-base font-bold text-[#9FBEDA]">/mês</span></div>
+              <div className="font-display font-semibold text-[9px] tracking-[0.16em] text-[#9FBEDA] mt-1">MENSALIDADE DO CAMPEONATO</div>
+            </div>
+          </div>
+        </div>
+
         <div className="mt-4 border border-[#E1E7EF] border-t-[4px] border-t-[#CA4F24] bg-[#F7F9FC] p-5">
           <div className="font-display font-bold text-[9px] tracking-[0.28em] text-[#7D8EA6] mb-4">O QUE O PILOTO PRECISA TER</div>
           <div className="space-y-3">
