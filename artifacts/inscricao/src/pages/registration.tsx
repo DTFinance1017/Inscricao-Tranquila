@@ -269,7 +269,7 @@ export default function RegistrationPage() {
             A Copa Raceman Kart entra na temporada 2027 com o mesmo princípio que consolidou o campeonato entre os pilotos amadores: motor forte, regulamento técnico rígido e uma estrutura que entrega padrão profissional.
           </p>
           <p>
-            São <strong className="text-[#0C2C55]">11 etapas e 11 treinos oficiais</strong>, disputados com motores Honda RBC de 21HP lacrados e de propriedade exclusiva do campeonato.
+            São <strong className="text-[#0C2C55]">11 etapas e 11 treinos oficiais</strong>, disputados com motores Honda RBC de 18HP lacrados e de propriedade exclusiva do campeonato.
           </p>
         </div>
 
@@ -306,7 +306,7 @@ export default function RegistrationPage() {
             <div>
               <div className="font-display font-bold text-[9px] tracking-[0.2em] text-[#F2B21C] mb-1.5">ALUGUEL DO MOTOR OFICIAL 2027</div>
               <div className="font-display font-black text-3xl leading-none text-white">R$ 2.950<span className="text-base font-bold text-[#9FBEDA]">,00</span></div>
-              <div className="text-[11px] leading-relaxed text-[#9FBEDA] mt-2">Aluguel do motor Honda RBC 21HP para as <span className="text-white font-semibold">11 etapas + 11 treinos</span> da temporada.</div>
+              <div className="text-[11px] leading-relaxed text-[#9FBEDA] mt-2">Aluguel do motor Honda RBC 18HP para as <span className="text-white font-semibold">11 etapas + 11 treinos</span> da temporada.</div>
             </div>
             <div className="h-px bg-white/10"></div>
             <div>
@@ -318,7 +318,7 @@ export default function RegistrationPage() {
             <div className="font-display font-bold text-[9px] tracking-[0.28em] text-[#9FBEDA] mb-3">O QUE ESTÁ INCLUSO</div>
             <div className="space-y-2">
               {[
-                "Motor oficial Honda RBC 21HP, lacrado, para toda a temporada",
+                "Motor oficial Honda RBC 18HP, lacrado, para toda a temporada",
                 "11 treinos oficiais, um antes de cada etapa",
                 "Equalização completa dos motores duas vezes ao ano",
                 "Sorteio filmado dos motores em cada etapa",
