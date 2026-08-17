@@ -24,7 +24,6 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { 
   useCreateRegistration, 
-  useGetRegistrationStats
 } from "@workspace/api-client-react";
 import { Loader2, CheckCircle2, ChevronRight, Trophy, Zap, MapPin, MessageCircle } from "lucide-react";
 
@@ -71,7 +70,6 @@ export default function RegistrationPage() {
   const [waMessage, setWaMessage] = useState("");
   const [copied, setCopied] = useState(false);
 
-  const stats = useGetRegistrationStats();
   const createRegistration = useCreateRegistration();
 
   const form = useForm<FormValues>({
@@ -367,12 +365,6 @@ export default function RegistrationPage() {
           </div>
         </div>
         
-        {stats.data && (
-          <div className="mt-8 flex items-center justify-between text-[10px] font-display font-bold uppercase tracking-[0.15em] text-[#7D8EA6] animate-in fade-in duration-1000 delay-700 fill-mode-both">
-            <span>Pilotos na fila de análise</span>
-            <span className="text-[#1B5FA8] bg-[#1B5FA8]/10 px-2.5 py-1 rounded-sm">{stats.data.total} registrados</span>
-          </div>
-        )}
       </section>
 
       {/* Tracks Section */}
