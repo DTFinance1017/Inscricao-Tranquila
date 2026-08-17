@@ -354,6 +354,35 @@ export default function RegistrationPage() {
           </div>
         </div>
 
+        <div className="mt-4 border border-[#E1E7EF] border-t-[4px] border-t-[#F2B21C] bg-white p-5">
+          <div className="font-display font-bold text-[9px] tracking-[0.28em] text-[#7D8EA6] mb-4">PREMIAÇÃO</div>
+          <div className="space-y-4">
+            <div>
+              <div className="font-display font-black text-2xl leading-none text-[#0C2C55]">TOP <span className="text-[#F2B21C]">5</span></div>
+              <div className="text-[12px] leading-snug text-[#3B4B62] mt-1.5">Troféus para os 5 melhores colocados de cada etapa, em cada categoria.</div>
+            </div>
+            <div className="h-px bg-[#E1E7EF]"></div>
+            <div>
+              <div className="font-display font-bold text-[10px] tracking-[0.2em] text-[#CA4F24] mb-2">VOUCHER RESTAURANTE POBRE JUAN — POR ETAPA</div>
+              <div className="flex gap-3">
+                <div className="flex-1 bg-[#F7F9FC] border border-[#E1E7EF] p-3">
+                  <div className="font-display font-black text-xl leading-none text-[#0C2C55]">R$ 500</div>
+                  <div className="font-display font-semibold text-[9px] tracking-[0.14em] text-[#5B6E88] mt-1">VENCEDOR CATEGORIA OURO</div>
+                </div>
+                <div className="flex-1 bg-[#F7F9FC] border border-[#E1E7EF] p-3">
+                  <div className="font-display font-black text-xl leading-none text-[#0C2C55]">R$ 300</div>
+                  <div className="font-display font-semibold text-[9px] tracking-[0.14em] text-[#5B6E88] mt-1">VENCEDOR CATEGORIA PRATA</div>
+                </div>
+              </div>
+            </div>
+            <div className="h-px bg-[#E1E7EF]"></div>
+            <div className="bg-[#0C2C55] p-4">
+              <div className="font-display font-black text-sm leading-snug text-white uppercase">Premiação final <span className="text-[#F2B21C]">surpresa e especial</span></div>
+              <div className="text-[11px] leading-snug text-[#9FBEDA] mt-1">Reservada para o encerramento da temporada.</div>
+            </div>
+          </div>
+        </div>
+
         <div className="mt-8 relative bg-[#0C2C55] overflow-hidden flex items-center min-h-[120px]">
           <img src={photoKart} alt="" className="absolute inset-0 w-full h-full object-cover opacity-55" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0C2C55] via-[#0C2C55]/80 to-transparent"></div>
