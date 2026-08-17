@@ -1,0 +1,1 @@
+- [Brand pattern source](brand-pattern-source.md) — official Copa Raceman Kart design tokens/assets location; always reuse them, never improvise a palette; PDF logo extraction needs SMask recombine.

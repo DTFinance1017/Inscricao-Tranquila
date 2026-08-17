@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
@@ -40,12 +40,14 @@
   --color-destructive-foreground: hsl(var(--destructive-foreground));
   --color-destructive-border: var(--destructive-border);
 
-  --color-brand-navy: #0B2B55;
-  --color-brand-navy-dark: #082446;
-  --color-brand-yellow: #F0B010;
-  --color-brand-blue: #3291CB;
-  --color-brand-orange: #EA4D1C;
-  --color-brand-offwhite: #F0F0F0;
+  --color-brand-navy: #0C2C55;
+  --color-brand-navy-dark: #071B36;
+  --color-brand-navy-light: #154C8C;
+  --color-brand-yellow: #F2B21C;
+  --color-brand-blue: #1B5FA8;
+  --color-brand-orange: #CA4F24;
+  --color-brand-offwhite: #F8FAFC;
+  --color-brand-border: #DFE5EE;
 
   --color-chart-1: hsl(var(--chart-1));
   --color-chart-2: hsl(var(--chart-2));
@@ -71,62 +73,64 @@
   --elevate-1: rgba(0, 0, 0, 0.03);
   --elevate-2: rgba(0, 0, 0, 0.08);
 
-  /* Background: Off-white #F0F0F0 */
-  --background: 0 0% 94%;
-  /* Foreground: Dark navy #082446 */
-  --foreground: 213 80% 15%;
-  --border: 214 20% 85%;
+  /* Background: Off-white #F8FAFC */
+  --background: 210 33% 98%;
+  /* Foreground: Dark navy #0C2C55 */
+  --foreground: 214 75% 19%;
+  --border: 216 33% 90%; /* #DFE5EE */
+  
   /* Cards: pure white for content */
   --card: 0 0% 100%;
-  --card-foreground: 213 80% 15%;
-  --card-border: 214 20% 85%;
+  --card-foreground: 214 75% 19%;
+  --card-border: 216 33% 90%;
   
   --popover: 0 0% 100%;
-  --popover-foreground: 213 80% 15%;
-  --popover-border: 214 20% 85%;
+  --popover-foreground: 214 75% 19%;
+  --popover-border: 216 33% 90%;
   
-  /* Primary: Navy #0B2B55 */
-  --primary: 214 77% 19%;
+  /* Primary: Navy #0C2C55 */
+  --primary: 214 75% 19%;
   --primary-foreground: 0 0% 100%;
   
-  /* Secondary: Light Blue #3291CB */
-  --secondary: 203 60% 50%;
+  /* Secondary: Light Blue #1B5FA8 */
+  --secondary: 211 72% 38%;
   --secondary-foreground: 0 0% 100%;
   
-  --muted: 214 10% 90%;
-  --muted-foreground: 214 20% 45%;
+  /* Muted: Light gray-blue */
+  --muted: 216 33% 95%; /* #F1F5F9 */
+  --muted-foreground: 215 20% 45%; /* #7D8EA6 approx */
   
-  /* Accent: Yellow/Gold #F0B010 */
-  --accent: 43 87% 50%;
-  --accent-foreground: 213 80% 15%;
+  /* Accent: Yellow/Gold #F2B21C */
+  --accent: 42 89% 53%;
+  --accent-foreground: 214 75% 19%;
   
-  /* Destructive: Orange-red #EA4D1C */
-  --destructive: 14 82% 51%;
+  /* Destructive: Orange-red #CA4F24 */
+  --destructive: 15 70% 47%;
   --destructive-foreground: 0 0% 100%;
   
-  --input: 214 20% 85%;
-  --ring: 43 87% 50%; /* Yellow ring */
+  --input: 216 33% 90%;
+  --ring: 42 89% 53%; /* Yellow ring */
 
-  --chart-1: 214 77% 19%;
-  --chart-2: 43 87% 50%;
-  --chart-3: 203 60% 50%;
-  --chart-4: 14 82% 51%;
-  --chart-5: 213 80% 15%;
+  --chart-1: 214 75% 19%;
+  --chart-2: 42 89% 53%;
+  --chart-3: 211 72% 38%;
+  --chart-4: 15 70% 47%;
+  --chart-5: 214 30% 25%;
 
-  --app-font-sans: 'Outfit', sans-serif;
-  --app-font-display: 'Outfit', sans-serif;
+  --app-font-sans: 'Montserrat', sans-serif;
+  --app-font-display: 'Saira', sans-serif;
   --app-font-serif: Georgia, serif;
   --app-font-mono: 'Space Mono', monospace;
   --radius: 0.25rem;
 
-  --shadow-2xs: 0px 2px 0px 0px hsl(214 77% 19% / 0.05);
-  --shadow-xs: 0px 2px 0px 0px hsl(214 77% 19% / 0.05);
-  --shadow-sm: 0px 2px 0px 0px hsl(214 77% 19% / 0.05), 0px 1px 2px -1px hsl(214 77% 19% / 0.05);
-  --shadow: 0px 2px 0px 0px hsl(214 77% 19% / 0.05), 0px 1px 2px -1px hsl(214 77% 19% / 0.05);
-  --shadow-md: 0px 2px 0px 0px hsl(214 77% 19% / 0.05), 0px 2px 4px -1px hsl(214 77% 19% / 0.05);
-  --shadow-lg: 0px 2px 0px 0px hsl(214 77% 19% / 0.1), 0px 4px 6px -1px hsl(214 77% 19% / 0.1);
-  --shadow-xl: 0px 2px 0px 0px hsl(214 77% 19% / 0.1), 0px 8px 10px -1px hsl(214 77% 19% / 0.1);
-  --shadow-2xl: 0px 2px 0px 0px hsl(214 77% 19% / 0.1);
+  --shadow-2xs: 0px 2px 0px 0px hsl(214 75% 19% / 0.05);
+  --shadow-xs: 0px 2px 0px 0px hsl(214 75% 19% / 0.05);
+  --shadow-sm: 0px 2px 0px 0px hsl(214 75% 19% / 0.05), 0px 1px 2px -1px hsl(214 75% 19% / 0.05);
+  --shadow: 0px 2px 0px 0px hsl(214 75% 19% / 0.05), 0px 1px 2px -1px hsl(214 75% 19% / 0.05);
+  --shadow-md: 0px 2px 0px 0px hsl(214 75% 19% / 0.05), 0px 2px 4px -1px hsl(214 75% 19% / 0.05);
+  --shadow-lg: 0px 2px 0px 0px hsl(214 75% 19% / 0.1), 0px 4px 6px -1px hsl(214 75% 19% / 0.1);
+  --shadow-xl: 0px 2px 0px 0px hsl(214 75% 19% / 0.1), 0px 8px 10px -1px hsl(214 75% 19% / 0.1);
+  --shadow-2xl: 0px 2px 0px 0px hsl(214 75% 19% / 0.1);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
 
@@ -138,50 +142,47 @@
 }
 
 .dark {
-  /* Using the same brand colors but adjusted for dark mode if requested, 
-     though the design is navy-dominant light mode. */
   --button-outline: rgba(255, 255, 255, 0.1);
   --badge-outline: rgba(255, 255, 255, 0.05);
   --opaque-button-border-intensity: 9;
   --elevate-1: rgba(255, 255, 255, 0.04);
   --elevate-2: rgba(255, 255, 255, 0.09);
 
-  /* Background: Dark navy #082446 */
-  --background: 213 80% 15%;
-  --foreground: 0 0% 94%;
+  --background: 214 75% 19%;
+  --foreground: 0 0% 98%;
   --border: 214 40% 25%;
   
-  --card: 214 77% 19%;
+  --card: 214 70% 15%;
   --card-foreground: 0 0% 98%;
   --card-border: 214 40% 25%;
   
-  --popover: 214 77% 19%;
+  --popover: 214 70% 15%;
   --popover-foreground: 0 0% 98%;
   --popover-border: 214 40% 25%;
   
-  --primary: 43 87% 50%; /* Yellow primary in dark mode */
-  --primary-foreground: 213 80% 15%;
+  --primary: 42 89% 53%;
+  --primary-foreground: 214 75% 19%;
   
-  --secondary: 203 60% 50%;
+  --secondary: 211 72% 38%;
   --secondary-foreground: 0 0% 100%;
   
   --muted: 214 40% 25%;
   --muted-foreground: 214 20% 70%;
   
-  --accent: 43 87% 50%;
-  --accent-foreground: 213 80% 15%;
+  --accent: 42 89% 53%;
+  --accent-foreground: 214 75% 19%;
   
-  --destructive: 14 82% 51%;
+  --destructive: 15 70% 47%;
   --destructive-foreground: 0 0% 100%;
   
   --input: 214 40% 25%;
-  --ring: 43 87% 50%;
+  --ring: 42 89% 53%;
   
-  --chart-1: 43 87% 50%;
-  --chart-2: 203 60% 50%;
-  --chart-3: 14 82% 51%;
+  --chart-1: 42 89% 53%;
+  --chart-2: 211 72% 38%;
+  --chart-3: 15 70% 47%;
   --chart-4: 0 0% 94%;
-  --chart-5: 214 77% 19%;
+  --chart-5: 214 75% 19%;
 
   --shadow-2xs: 0px 2px 0px 0px hsl(0 0% 0% / 0.3);
   --shadow-xs: 0px 2px 0px 0px hsl(0 0% 0% / 0.3);
