@@ -705,7 +705,7 @@ export default function RegistrationPage() {
                   rel="noopener noreferrer"
                   className="inline-block mt-3 bg-[#F2B21C] text-[#0C2C55] font-display font-bold text-[12px] tracking-[0.12em] px-5 py-3 hover:scale-[1.03] transition-transform"
                 >
-                  QUERO SER PATROCINADOR · (11) 99955-6595
+                  QUERO SER PATROCINADOR
                 </a>
               </div>
             </div>
