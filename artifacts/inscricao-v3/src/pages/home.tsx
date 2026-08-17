@@ -891,6 +891,19 @@ export default function Home() {
           >
             @racemankart
           </a>
+
+          <p className="text-white text-sm font-display font-bold tracking-widest uppercase mb-6">
+            Visite nosso site
+          </p>
+
+          <a
+            href="https://racemankart.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center font-display font-black text-xl text-brand-navy bg-brand-yellow px-8 py-4 mb-12 hover:scale-[1.03] transition-transform rounded-none shadow-lg"
+          >
+            racemankart.com.br
+          </a>
           
           <p className="text-[#8FAED5] text-[10px] font-display font-bold tracking-[0.2em] uppercase">
             COPA RACEMAN KART 2027 · MEDIA KIT OFICIAL
