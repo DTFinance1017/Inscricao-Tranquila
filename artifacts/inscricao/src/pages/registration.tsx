@@ -26,7 +26,7 @@ import {
   useCreateRegistration, 
   useGetRegistrationStats
 } from "@workspace/api-client-react";
-import { Loader2, CheckCircle2, ChevronRight, Trophy, Zap, MapPin } from "lucide-react";
+import { Loader2, CheckCircle2, ChevronRight, Trophy, Zap, MapPin, MessageCircle } from "lucide-react";
 
 // Official Logos
 import logoRaceman from "@/assets/brand/rkt-color.png";
@@ -129,29 +129,38 @@ export default function RegistrationPage() {
     return (
       <div className="min-h-screen bg-[#F8FAFC] flex flex-col items-center justify-center p-6 animate-in fade-in duration-700 font-sans">
         <div className="max-w-md w-full text-center space-y-6">
-          <div className="w-20 h-20 bg-[#25D366] rounded-full flex items-center justify-center mx-auto shadow-lg animate-in zoom-in-50 delay-150 duration-500">
-            <CheckCircle2 className="w-10 h-10 text-white" />
+          <div className="w-20 h-20 bg-[#F2B21C] rounded-full flex items-center justify-center mx-auto shadow-lg animate-in zoom-in-50 delay-150 duration-500 text-[#0C2C55]">
+            <MessageCircle className="w-10 h-10" />
           </div>
           <div className="space-y-3">
-            <h1 className="text-4xl font-display font-black uppercase tracking-tight text-[#0C2C55] leading-none">Inscrição<br/>Recebida!</h1>
+            <h1 className="text-4xl font-display font-black uppercase tracking-[-0.01em] text-[#0C2C55] leading-none">Falta só<br/><span className="text-[#1B5FA8]">um passo!</span></h1>
             <p className="text-[#3B4B62] text-[14.5px] leading-[1.6]">
-              Vamos analisar seu ingresso no campeonato.
-              <br/>
-              Acompanhe o andamento no WhatsApp oficial da diretoria:
+              Para concluir sua inscrição, envie a mensagem no WhatsApp da diretoria.
+              <span className="block mt-2 font-display font-bold text-[12px] tracking-[0.15em] text-[#CA4F24] uppercase">
+                Sua inscrição só será analisada após o envio.
+              </span>
             </p>
-            <div className="font-display font-bold text-[18px] text-[#1B5FA8] tracking-[0.08em] my-3">
+            <div className="font-display font-bold text-[18px] text-[#0C2C55] tracking-[0.08em] my-3 border border-[#DFE5EE] bg-white py-2 rounded-sm mx-8 shadow-sm">
               (19) 99417-3926
             </div>
           </div>
-          <div className="pt-4 space-y-3">
+          <div className="pt-4 space-y-3 relative">
             {waLink && (
-              <Button 
-                className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white h-14 font-display font-bold tracking-wide text-[14px]" 
-                size="lg"
-                onClick={() => window.open(waLink, "_blank")}
-              >
-                CONTINUAR NO WHATSAPP
-              </Button>
+              <div className="relative">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#0C2C55] text-[#F2B21C] font-display font-bold text-[9px] tracking-widest px-3 py-1 rounded-sm uppercase z-10 whitespace-nowrap shadow-md">
+                  PASSO FINAL OBRIGATÓRIO
+                </div>
+                <Button 
+                  className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white h-16 font-display font-bold tracking-wide text-[13px] relative shadow-lg group hover:scale-[1.02] transition-transform animate-[pulse_2s_infinite]" 
+                  size="lg"
+                  onClick={() => window.open(waLink, "_blank")}
+                >
+                  <span className="flex items-center gap-2">
+                    ENVIAR INSCRIÇÃO NO WHATSAPP
+                    <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Button>
+              </div>
             )}
             <Button 
               className="w-full bg-transparent hover:bg-[#DFE5EE] text-[#0C2C55] h-12 font-display font-bold border border-[#DFE5EE] tracking-wide" 
@@ -255,6 +264,11 @@ export default function RegistrationPage() {
             <div>
               <div className="font-display font-black text-3xl leading-none text-[#0C2C55]">2<span className="text-xl">×</span></div>
               <div className="font-display font-semibold text-[9px] tracking-[0.16em] text-[#5B6E88] mt-1">EQUALIZAÇÃO POR ANO</div>
+            </div>
+            <div className="h-px bg-[#E1E7EF]"></div>
+            <div>
+              <div className="font-display font-black text-3xl leading-none text-[#0C2C55]">3<span className="text-[14px] ml-1 uppercase tracking-wide">Etapas</span></div>
+              <div className="font-display font-semibold text-[9px] tracking-[0.16em] text-[#5B6E88] mt-1">USO DE PNEU NOVO</div>
             </div>
           </div>
         </div>
