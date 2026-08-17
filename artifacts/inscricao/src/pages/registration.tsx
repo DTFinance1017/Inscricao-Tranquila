@@ -332,6 +332,7 @@ export default function RegistrationPage() {
                 "Cronometragem eletrônica e resultados oficiais por etapa",
                 "Premiação por etapa e classificação geral da temporada",
                 "Cobertura de mídia, fotos e divulgação nos canais oficiais",
+                "Transmissão ao vivo de algumas etapas, para amigos e familiares torcerem por você",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-2.5">
                   <div className="w-1.5 h-1.5 mt-[5px] bg-[#F2B21C] shrink-0"></div>
