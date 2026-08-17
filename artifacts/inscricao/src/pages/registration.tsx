@@ -38,7 +38,8 @@ import logoLeofran from "@/assets/brand/leofran.png";
 import logoTatu from "@/assets/brand/tatu.png";
 import logoTechZ from "@/assets/brand/techz.png";
 import logoFioraiz from "@/assets/brand/fioraiz.png";
-import logoPobreJuan from "@/assets/brand/pobrejuan.png";
+import logoPobreJuan from "@/assets/brand/pobrejuan-new.svg";
+import logoUlson from "@/assets/brand/ulson.png";
 import photoDriver from "@/assets/brand/photo-driver.png";
 import photoKart from "@/assets/brand/photo-kart.png";
 
@@ -617,9 +618,11 @@ export default function RegistrationPage() {
                   <img src={logoFioraiz} alt="Fioraiz" className="max-h-8 max-w-full object-contain" />
                   <div className="font-display font-bold text-[7px] tracking-[0.14em] text-[#7D8EA6]">fioraiz.com.br</div>
                 </div>
-                <div className="border border-[#DFE5EE] bg-white h-20 flex items-center justify-center p-4 col-span-2 flex-col gap-1">
-                  <img src={logoPobreJuan} alt="Pobre Juan" className="max-h-10 max-w-full object-contain" />
-                  <div className="font-display font-bold text-[8px] tracking-[0.14em] text-[#7D8EA6]">Restaurante Pobre Juan</div>
+                <div className="border border-white/15 bg-[#071B36] h-20 flex items-center justify-center p-4">
+                  <img src={logoUlson} alt="Ulson Cervejaria" className="max-h-full max-w-full object-contain" />
+                </div>
+                <div className="border border-white/15 bg-[#071B36] h-20 flex items-center justify-center p-4">
+                  <img src={logoPobreJuan} alt="Pobre Juan" className="max-h-full max-w-full object-contain" />
                 </div>
               </div>
             </div>
