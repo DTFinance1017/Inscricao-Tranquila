@@ -325,7 +325,7 @@ export default function RegistrationPage() {
                 "Uso do motor oficial nos 11 treinos oficiais, um antes de cada etapa (custo da pista por conta do piloto)",
                 "Piloto com motor próprio pode treinar em outras datas, exceto na semana da corrida, conforme regulamento",
                 "Equalização completa dos motores duas vezes ao ano",
-                "Sorteio filmado dos motores em cada etapa",
+                "Sorteio dos motores em cada etapa",
                 "Manutenção, revisão, transporte e logística dos motores",
                 "Cronometragem eletrônica e resultados oficiais por etapa",
                 "Premiação por etapa e classificação geral da temporada",
