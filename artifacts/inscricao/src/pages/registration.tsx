@@ -268,7 +268,8 @@ export default function RegistrationPage() {
             <div className="h-px bg-[#E1E7EF]"></div>
             <div>
               <div className="font-display font-black text-3xl leading-none text-[#0C2C55]">3<span className="text-[14px] ml-1 uppercase tracking-wide">Etapas</span></div>
-              <div className="font-display font-semibold text-[9px] tracking-[0.16em] text-[#5B6E88] mt-1">USO DE PNEU NOVO</div>
+              <div className="font-display font-semibold text-[9px] tracking-[0.16em] text-[#5B6E88] mt-1">USO OBRIGATÓRIO DE PNEU NOVO</div>
+              <div className="font-display font-bold text-[9px] tracking-[0.16em] text-[#CA4F24] mt-0.5">CUSTO DO PILOTO</div>
             </div>
           </div>
         </div>
