@@ -821,22 +821,22 @@ export default function Home() {
               <div className="bg-white flex flex-col h-full shadow-2xl relative">
                 <div className="absolute top-0 left-0 w-full h-1 bg-brand-navy"></div>
                 <div className="p-8 flex-1 flex flex-col justify-center items-center text-center">
-                  <div className="font-display font-black text-[10px] tracking-widest text-brand-navy mb-6 uppercase">Master Title</div>
+                  <div className="font-display font-black text-[10px] tracking-widest text-brand-navy mb-6 uppercase">Master</div>
                   <div className="w-full py-8 px-6 flex items-center justify-center mb-6">
                     <img src={logoPanther} alt="Panther Lubrificantes" className="h-14 object-contain" />
                   </div>
-                  <p className="text-sm text-brand-graphite/70 font-medium">Panther Lubrificantes assina a temporada 2027 como Master Title.</p>
+                  <p className="text-sm text-brand-graphite/70 font-medium">Panther Lubrificantes assina a temporada 2027 como patrocinadora Master.</p>
                 </div>
               </div>
 
               <div className="bg-white flex flex-col h-full shadow-2xl relative">
-                <div className="absolute top-0 left-0 w-full h-1 bg-brand-blue"></div>
+                <div className="absolute top-0 left-0 w-full h-1 bg-brand-navy"></div>
                 <div className="p-8 flex-1 flex flex-col justify-center items-center text-center">
-                  <div className="font-display font-black text-[10px] tracking-widest text-brand-blue mb-6 uppercase">Master</div>
+                  <div className="font-display font-black text-[10px] tracking-widest text-brand-navy mb-6 uppercase">Master</div>
                   <div className="w-full py-8 px-6 flex items-center justify-center mb-6">
                     <img src={logoAro} alt="ARO Contabilidade" className="h-16 object-contain" />
                   </div>
-                  <p className="text-sm text-brand-graphite/70 font-medium">ARO Contabilidade acompanha o campeonato com destaque em todas as etapas.</p>
+                  <p className="text-sm text-brand-graphite/70 font-medium">ARO Contabilidade assina a temporada 2027 como patrocinadora Master.</p>
                 </div>
               </div>
             </div>
