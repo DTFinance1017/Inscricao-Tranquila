@@ -27,7 +27,7 @@ import { Loader2, ChevronRight, Trophy, Flag, Shield, Calendar, CreditCard, Gift
 // Brand Assets
 import logoRaceman from "@/assets/brand/rkt-color.png";
 import logoRacemanWhite from "@/assets/brand/rkt-white.png";
-import logoPanther from "@/assets/brand/panther-white.png";
+import logoPanther from "@/assets/brand/panther-main.png";
 import logoAro from "@/assets/brand/aro.png";
 import logoAroWhite from "@/assets/brand/aro-white.png";
 import logoLeofran from "@/assets/brand/leofran.png";
@@ -809,8 +809,8 @@ export default function Home() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-brand-navy"></div>
                 <div className="p-8 flex-1 flex flex-col justify-center items-center text-center">
                   <div className="font-display font-black text-[10px] tracking-widest text-brand-navy mb-6 uppercase">Master Title</div>
-                  <div className="bg-brand-navy w-full py-8 px-6 flex items-center justify-center mb-6">
-                    <img src={logoPanther} alt="Panther Lubrificantes" className="h-12 object-contain" />
+                  <div className="w-full py-8 px-6 flex items-center justify-center mb-6">
+                    <img src={logoPanther} alt="Panther Lubrificantes" className="h-14 object-contain" />
                   </div>
                   <p className="text-sm text-brand-graphite/70 font-medium">Panther Lubrificantes assina a temporada 2027 como Master Title.</p>
                 </div>
