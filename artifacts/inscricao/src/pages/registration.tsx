@@ -695,6 +695,16 @@ export default function RegistrationPage() {
         </div>
         
         <div className="max-w-md mx-auto mt-16 pt-8 border-t border-white/10 text-center flex flex-col items-center">
+            <p className="text-white text-[13px] font-display font-bold tracking-wide uppercase mb-2">Siga nossa página e fique por dentro das novidades</p>
+            <a
+              href="https://www.instagram.com/racemankart"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block font-display font-black text-lg text-white px-5 py-2 mb-8 hover:scale-[1.03] transition-transform"
+              style={{ background: "linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4)" }}
+            >
+              @racemankart
+            </a>
             <img src={logoRacemanWhite} alt="Copa Raceman Kart" className="w-28 opacity-40 mb-4" />
             <p className="text-[#8FAED5] text-[9px] font-display font-bold tracking-[0.24em] uppercase">COPA RACEMAN KART 2027 · MEDIA KIT OFICIAL</p>
         </div>
