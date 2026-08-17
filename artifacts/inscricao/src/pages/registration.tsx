@@ -376,6 +376,24 @@ export default function RegistrationPage() {
               </div>
             </div>
             <div className="h-px bg-[#E1E7EF]"></div>
+            <div>
+              <div className="font-display font-bold text-[10px] tracking-[0.2em] text-[#CA4F24] mb-2">VANTAGENS DOS PATROCINADORES</div>
+              <div className="space-y-2.5">
+                <div className="flex items-start gap-2.5">
+                  <div className="w-1.5 h-1.5 mt-[5px] bg-[#F2B21C] shrink-0"></div>
+                  <div className="text-[12px] leading-snug text-[#3B4B62]">Descontos exclusivos para compras na <span className="font-semibold text-[#0C2C55]">TechZ Informática</span></div>
+                </div>
+                <div className="flex items-start gap-2.5">
+                  <div className="w-1.5 h-1.5 mt-[5px] bg-[#F2B21C] shrink-0"></div>
+                  <div className="text-[12px] leading-snug text-[#3B4B62]">Cupom de desconto especial para tratamento contra calvície na <span className="font-semibold text-[#0C2C55]">Fio Raiz</span></div>
+                </div>
+                <div className="flex items-start gap-2.5">
+                  <div className="w-1.5 h-1.5 mt-[5px] bg-[#F2B21C] shrink-0"></div>
+                  <div className="text-[12px] leading-snug text-[#3B4B62]">Encerramento de cada etapa com cerveja <span className="font-semibold text-[#0C2C55]">Ulson</span> para pilotos maiores de idade</div>
+                </div>
+              </div>
+            </div>
+            <div className="h-px bg-[#E1E7EF]"></div>
             <div className="bg-[#0C2C55] p-4">
               <div className="font-display font-black text-sm leading-snug text-white uppercase">Premiação final <span className="text-[#F2B21C]">surpresa e especial</span></div>
               <div className="text-[11px] leading-snug text-[#9FBEDA] mt-1">Reservada para o encerramento da temporada.</div>
