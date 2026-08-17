@@ -305,7 +305,8 @@ export default function RegistrationPage() {
           <div className="space-y-4">
             <div>
               <div className="font-display font-bold text-[9px] tracking-[0.2em] text-[#F2B21C] mb-1.5">ALUGUEL DO MOTOR OFICIAL 2027</div>
-              <div className="font-display font-black text-3xl leading-none text-white">R$ 2.950<span className="text-base font-bold text-[#9FBEDA]">,00</span></div>
+              <div className="font-display font-black text-3xl leading-none text-white">R$ 3.000<span className="text-base font-bold text-[#9FBEDA]">,00 à vista</span></div>
+              <div className="inline-block bg-[#F2B21C] px-3 py-1.5 font-display font-black text-lg leading-none text-[#0C2C55] mt-2">ou até 4× de R$ 800,00</div>
               <div className="text-[11px] leading-relaxed text-[#9FBEDA] mt-2">Aluguel do motor Honda RBC 18HP para as <span className="text-white font-semibold">11 etapas + 11 treinos</span> da temporada.</div>
             </div>
             <div className="h-px bg-white/10"></div>
